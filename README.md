@@ -22,5 +22,6 @@ cd git/contrib/completion
 . git-prompt.sh
 # then add the prompt - setting this var runs the code that has 'while read'
 export GIT_PS1_SHOWUPSTREAM="auto"
-PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
+# no automatic logout occurs
 ```
